@@ -2,10 +2,16 @@ import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { projects } from "../data/projects";
 import { profile } from "../data/profile";
-import { ArrowRight, Github, Linkedin, ChevronRight } from "lucide-react";
+import { ArrowRight, Github, Linkedin, X, FileText } from "lucide-react";
+import { useState } from "react";
 
 export function Home() {
   const navigate = useNavigate();
+
+  const [selectedCertificate, setSelectedCertificate] = useState<{
+    image: string;
+    title: string;
+  } | null>(null);
 
   return (
     <motion.div
@@ -232,6 +238,152 @@ export function Home() {
           </div>
         </motion.section>
 
+
+{/* CERTIFICATIONS */}
+<motion.section
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
+  <h2
+    className="mb-12 text-4xl text-center"
+    style={{ fontWeight: 700 }}
+  >
+    My Certifications
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    {/* CMIT CERTIFICATE */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.4 }}
+      className="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/10 hover:border-[#2EF2D1]/40 transition-all duration-300"
+    >
+      {/* Certificate Thumbnail */}
+      <button
+        type="button"
+        onClick={() =>
+          setSelectedCertificate({
+            image: "/certifications/cmit-internship.jpeg",
+            title: "CMIT Internship Certificate",
+          })
+        }
+        className="relative w-full h-64 overflow-hidden bg-black/20 group cursor-zoom-in"
+      >
+        <img
+          src="/certifications/cmit-internship.jpeg"
+          alt="CMIT Internship Certificate"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2 bg-black/70 rounded-lg text-sm text-white border border-white/20">
+            Click to enlarge
+          </span>
+        </div>
+      </button>
+
+      {/* Certificate Information */}
+      <div className="p-6">
+        <h3
+          className="text-xl text-white mb-2"
+          style={{ fontWeight: 600 }}
+        >
+          CMIT Internship Program
+        </h3>
+
+        <p className="text-[#2EF2D1] mb-2">
+          PureLogics · PITB · CMIT
+        </p>
+
+        <p className="text-sm text-white/60 mb-5">
+          Certificate of Completion — Software Development Internship
+        </p>
+
+        <a
+          href="/certifications/cmit-internship.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all border border-white/10 text-white"
+        >
+          <FileText className="w-4 h-4 text-[#2EF2D1]" />
+          View PDF Certificate
+        </a>
+      </div>
+    </motion.div>
+
+
+    {/* GOOGLE AI ESSENTIALS CERTIFICATE */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.4, delay: 0.1 }}
+      className="bg-white/[0.04] rounded-2xl overflow-hidden border border-white/10 hover:border-[#7C5CFF]/40 transition-all duration-300"
+    >
+      {/* Certificate Thumbnail */}
+      <button
+        type="button"
+        onClick={() =>
+          setSelectedCertificate({
+            image: "/certifications/google-ai-essentials.jpeg",
+            title: "Google AI Essentials Certificate",
+          })
+        }
+        className="relative w-full h-64 overflow-hidden bg-black/20 group cursor-zoom-in"
+      >
+        <img
+          src="/certifications/google-ai-essentials.jpeg"
+          alt="Google AI Essentials Certificate"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2 bg-black/70 rounded-lg text-sm text-white border border-white/20">
+            Click to enlarge
+          </span>
+        </div>
+      </button>
+
+      {/* Certificate Information */}
+      <div className="p-6">
+        <h3
+          className="text-xl text-white mb-2"
+          style={{ fontWeight: 600 }}
+        >
+          Google AI Essentials
+        </h3>
+
+        <p className="text-[#7C5CFF] mb-2">
+          Google · Coursera
+        </p>
+
+        <p className="text-sm text-white/60 mb-5">
+          Specialization Certificate — May 13, 2026
+        </p>
+
+        <a
+          href="/certifications/google-ai-essentials.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all border border-white/10 text-white"
+        >
+          <FileText className="w-4 h-4 text-[#7C5CFF]" />
+          View PDF Certificate
+        </a>
+      </div>
+    </motion.div>
+
+  </div>
+</motion.section>
+
+
         {/* SKILLS OVERVIEW (COMPRESSED) */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -298,6 +450,36 @@ export function Home() {
           </div>
         </motion.section>
       </div>
+
+{/* CERTIFICATE ZOOM MODAL */}
+{selectedCertificate && (
+  <div
+    className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+    onClick={() => setSelectedCertificate(null)}
+  >
+    <div
+      className="relative max-w-6xl max-h-[95vh] w-full flex items-center justify-center"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Close Button */}
+      <button
+        type="button"
+        onClick={() => setSelectedCertificate(null)}
+        className="absolute -top-12 right-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all z-10"
+        aria-label="Close certificate preview"
+      >
+        <X className="w-5 h-5 text-white" />
+      </button>
+
+      {/* Enlarged Certificate */}
+      <img
+        src={selectedCertificate.image}
+        alt={selectedCertificate.title}
+        className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+      />
+    </div>
+  </div>
+)}
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 mt-32">
