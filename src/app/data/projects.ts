@@ -56,43 +56,43 @@ export const projects: Project[] = [
     ],
     screenshots: [
       {
-        url: '/Public/compfy/1.jpg',
+        url: '/compfy/1.jpg',
         title: 'Role Selection Screen',
         description:
           'Provides access to Compfy’s two user roles: customers and vendors. Customers use the system to explore and evaluate PC builds, while vendors manage their shops, builds, and inventory through the dedicated vendor dashboard.',
       },
       {
-        url: '/Public/compfy/2.jpg',
+        url: '/compfy/2.jpg',
         title: "Customer's Dashboard (Requirement Selection)",
         description:
           'Customer requirement interface for selecting the intended PC usage. Compfy supports Study / Office Work, Professional Editing / AI-ML, and Gaming & Streaming, with Casual and Heavy Usage levels for each category.',
       },
       {
-        url: '/Public/compfy/3.jpg',
+        url: '/compfy/3.jpg',
         title: 'Electricity Bill Calculation Module',
         description:
           'Calculates the estimated electricity usage of a PC build. Compfy includes estimated power consumption as part of its build evaluation so users can consider energy efficiency alongside performance and cost.',
       },
       {
-        url: '/Public/compfy/4.jpg',
+        url: '/compfy/4.jpg',
         title: 'Recommended Builds (with Vendor details)',
         description:
           'Displays suitable PC builds generated from customer requirements alongside vendor-provided build options. Customers can browse builds, compare prices, filter vendor builds by price or city, and view detailed specifications.',
       },
       {
-        url: '/Public/compfy/5.jpg',
+        url: '/compfy/5.jpg',
         title: 'PC Build Detailed Specs',
         description:
           'Provides detailed information about a selected PC build, including a compact component summary covering key specifications such as the CPU, GPU, RAM, and storage. Build details can also be printed or exported.',
       },
       {
-        url: '/Public/compfy/6.jpg',
+        url: '/compfy/6.jpg',
         title: "Vendor's Dashboard",
         description:
           'Dedicated dashboard for retailers to manage their virtual store in Compfy. Vendors can register their shop with details such as shop name, city, contact, and address, and manage their PC builds.',
       },
       {
-        url: '/Public/compfy/7.jpg',
+        url: '/compfy/7.jpg',
         title: 'Inventory Management',
         description:
           'Allows vendors to manage their hardware inventory using structured inventory data. Vendors can add, edit, and delete builds and view inventory with sorting and filtering capabilities.',
@@ -135,43 +135,43 @@ export const projects: Project[] = [
     ],
     screenshots: [
       {
-        url: '/Public/sdu/1.png',
+        url: '/sdu/1.png',
         title: 'Authentication Screen',
         description:
           'Secure authentication interface for accessing the SDU platform. The system uses token-based authentication to protect user data and provide secure access to diagnostic and benchmark information.',
       },
       {
-        url: '/Public/sdu/2.png',
+        url: '/sdu/2.png',
         title: 'User Dashboard',
         description:
           'Central dashboard for running system diagnostics and viewing hardware information. Users can inspect CPU, GPU, RAM, and storage specifications, launch benchmark tests, view performance summaries, and access saved test history.',
       },
       {
-        url: '/Public/sdu/3.png',
+        url: '/sdu/3.png',
         title: 'System Benchmarking Module',
         description:
           'Benchmarking interface for testing individual hardware components including CPU, GPU, RAM, and disk. The system runs simulated workloads, records usage, speed, and temperature, and generates performance and efficiency results.',
       },
       {
-        url: '/Public/sdu/4.png',
+        url: '/sdu/4.png',
         title: 'Live Benchmark and Stress Test Monitoring',
         description:
           'Live monitoring interface for observing system activity during testing. SDU tracks CPU, GPU, RAM, and disk usage while monitoring temperature and displaying performance information through visual charts and progress indicators.',
       },
       {
-        url: '/Public/sdu/5.png',
+        url: '/sdu/5.png',
         title: 'System Analysis (With Bottlenecks Detection)',
         description:
           'Analyzes benchmark results by comparing the system’s scores against benchmark data from systems with similar hardware configurations. SDU uses these comparative performance results to identify potential hardware bottlenecks, determine which components are underperforming, and generate data-driven upgrade recommendations.',
       },
       {
-        url: '/Public/sdu/6.png',
+        url: '/sdu/6.png',
         title: 'Community Reviews similar benchmarking results',
         description:
           'Community discussion interface where users can view and share comments related to similar benchmark results and system configurations. Authenticated users can add their own reviews and manage them by editing or deleting their comments, enabling community-driven insights alongside benchmark comparisons.',
       },
       {
-        url: '/Public/sdu/8.png',
+        url: '/sdu/8.png',
         title: 'User Profile Management',
         description:
           'Profile management interface where users can manage their account and maintain their diagnostic history. SDU stores user test results and system specifications and supports profile picture upload and editing.',
@@ -215,49 +215,49 @@ export const projects: Project[] = [
     ],
     screenshots: [
       {
-        url: '/Public/the_social/1.jpeg',
+        url: '/the_social/1.jpeg',
         title: 'Authentication Screen',
         description:
           'Secure authentication interface for accessing TheSocial. The platform uses JWT-based authentication with refresh tokens to provide secure and persistent user sessions.',
       },
       {
-        url: '/Public/the_social/2.jpeg',
+        url: '/the_social/2.jpeg',
         title: 'Discover nearby Communities (Location-Based)',
         description:
           'Location-based community discovery interface that helps users discover nearby groups using their geographic proximity. The platform supports configurable discovery ranges and automatically connects users with location-bound communities.',
       },
       {
-        url: '/Public/the_social/3.jpeg',
+        url: '/the_social/3.jpeg',
         title: 'Create New Community',
         description:
           'Interface for creating a new location-based community at the user’s current location. TheSocial supports creation of location groups with geographic coordinates and custom group metadata.',
       },
       {
-        url: '/Public/the_social/4.jpeg',
+        url: '/the_social/4.jpeg',
         title: 'Join Community',
         description:
           'Community joining interface for participating in existing location-based groups. Users can discover and join communities associated with their current geographic area, with dynamic group membership supporting changes in location.',
       },
       {
-        url: '/Public/the_social/5.jpeg',
+        url: '/the_social/5.jpeg',
         title: 'Community Chats and Posts',
         description:
           'Location-bound communication interface supporting real-time messaging and community posts. Users can exchange messages within groups and share multimedia content such as images, videos, and audio files.',
       },
       {
-        url: '/Public/the_social/6.jpeg',
+        url: '/the_social/6.jpeg',
         title: 'Games and Fun Activities',
         description:
           'Gaming interface for location-specific mini-games and puzzle-based activities. The platform supports multiplayer gaming sessions within location groups, along with tournament participation and game session management.',
       },
       {
-        url: '/Public/the_social/7.jpeg',
+        url: '/the_social/7.jpeg',
         title: 'Leaderboard (Community Scores)',
         description:
           'Location-specific leaderboard interface displaying player rankings and scores. The gaming system maintains individual and aggregate scoring data and supports leaderboards for local gaming activities and tournaments.',
       },
       {
-        url: '/Public/the_social/8.jpeg',
+        url: '/the_social/8.jpeg',
         title: 'App Settings and Profile Management',
         description:
           'Profile and privacy management interface where users can customize their profile and preferences. The platform supports avatar and bio customization, profile visibility controls, location-sharing privacy settings, and other user preferences.',
